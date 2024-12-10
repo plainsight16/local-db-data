@@ -1,0 +1,16 @@
+COPY temp_db.batchdate FROM '/home/workspace/data/sf_current/Batch1/BatchDate.txt';
+COPY temp_db.cashtransaction FROM '/home/workspace/data/sf_current/Batch1/CashTransaction.txt' delimiter '|';
+COPY temp_db.dailymarket FROM '/home/workspace/data/sf_current/Batch1/DailyMarket.txt' delimiter '|';
+COPY temp_db.date FROM '/home/workspace/data/sf_current/Batch1/Date.txt' delimiter '|';
+COPY temp_db.holdinghistory FROM '/home/workspace/data/sf_current/Batch1/HoldingHistory.txt' delimiter '|';
+COPY temp_db.hr FROM '/home/workspace/data/sf_current/Batch1/HR.csv' delimiter ',' CSV;
+COPY temp_db.industry FROM '/home/workspace/data/sf_current/Batch1/Industry.txt' delimiter '|';
+COPY temp_db.prospect FROM '/home/workspace/data/sf_current/Batch1/Prospect.csv' delimiter ',' CSV;
+COPY temp_db.statustype FROM '/home/workspace/data/sf_current/Batch1/StatusType.txt' delimiter '|';
+COPY temp_db.taxrate FROM '/home/workspace/data/sf_current/Batch1/TaxRate.txt' delimiter '|';
+COPY temp_db.time FROM '/home/workspace/data/sf_current/Batch1/Time.txt' delimiter '|';
+COPY temp_db.tradehistory FROM '/home/workspace/data/sf_current/Batch1/TradeHistory.txt' delimiter '|';
+COPY temp_db.trade FROM '/home/workspace/data/sf_current/Batch1/Trade.txt' delimiter '|' null as '';
+COPY temp_db.tradetype FROM '/home/workspace/data/sf_current/Batch1/TradeType.txt' delimiter '|';
+COPY temp_db.watchhistory FROM '/home/workspace/data/sf_current/Batch1/WatchHistory.txt' delimiter '|';
+COPY temp_db.audit FROM '/home/workspace/data/sf_current/Batch1_audit.csv' DELIMITER ',' HEADER CSV NULL AS '';

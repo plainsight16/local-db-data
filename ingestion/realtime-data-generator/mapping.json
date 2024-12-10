@@ -1,0 +1,70 @@
+{
+    "batchdate.txt":{
+        "table": "batchdate",
+        "columns": "batchdate"
+    },
+    "cashtransaction.txt": {
+        "table": "cashtransaction",
+        "columns": "ct_ca_id,ct_dts,ct_amt,ct_name"
+    },
+    "customermgmt.xml": {
+        "table": "customermgmt",
+        "columns": "actiontype,actionts,c_id,c_tax_id,c_gndr,c_tier,c_dob,c_l_name,c_f_name,c_m_name,c_adline1,c_adline2,c_zipcode,c_city,c_state_prov,c_ctry,c_prim_email,c_alt_email,c_p_1_ctry_code,c_p_1_area_code,c_p_1_local,c_p_1_ext,c_p_2_ctry_code,c_p_2_area_code,c_p_2_local,c_p_2_ext,c_p_3_ctry_code,c_p_3_area_code,c_p_3_local,c_p_3_ext,c_lcl_tx_id,c_nat_tx_id,ca_id,ca_tax_st,ca_b_id,ca_name"
+    },
+    "dailymarket.txt": {
+        "table": "dailymarket",
+        "columns": "dm_date,dm_s_symb,dm_close,dm_high,dm_low,dm_vol"
+    },
+    "date.txt": {
+        "table": "date",
+        "columns": "sk_dateid,datevalue,datedesc,calendaryearid,calendaryeardesc,calendarqtrid,calendarqtrdesc,calendarmonthid,calendarmonthdesc,calendarweekid,calendarweekdesc,dayofweeknum,dayofweekdesc,fiscalyearid,fiscalyeardesc,fiscalqtrid,fiscalqtrdesc,holidayflag"
+    },
+    "finwire":{
+        "table": "finwire",
+        "columns": "text"
+    },
+    "holdinghistory.txt": {
+        "table": "holdinghistory",
+        "columns": "hh_h_t_id,hh_t_id,hh_before_qty,hh_after_qty"
+    },
+    "hr.csv": {
+        "table": "hr",
+        "columns": "employeeid,managerid,employeefirstname,employeelastname,employeemi,employeejobcode,employeebranch,employeeoffice,employeephone"
+    },
+    "industry.txt": {
+        "table": "industry",
+        "columns": "in_id,in_name,in_sc_id"
+    },
+    "prospect.csv": {
+        "table": "prospect",
+        "columns": "agencyid,lastname,firstname,middleinitial,gender,addressline1,addressline2,postalcode,city,state,country,phone,income,numbercars,numberchildren,maritalstatus,age,creditrating,ownorrentflag,employer,numbercreditcards,networth"
+    },
+    "statustype.txt": {
+        "table": "statustype",
+        "columns": "st_id,st_name"
+    },
+    "taxrate.txt": {
+        "table": "taxrate",
+        "columns": "tx_id,tx_name,tx_rate"
+    },
+    "time.txt": {
+        "table": "time",
+        "columns": "sk_timeid,timevalue,hourid,hourdesc,minuteid,minutedesc,secondid,seconddesc,markethoursflag,officehoursflag"
+    },
+    "trade.txt": {
+        "table": "trade",
+        "columns": "t_id,t_dts,t_st_id,t_tt_id,t_is_cash,t_s_symb,t_qty,t_bid_price,t_ca_id,t_exec_name,t_trade_price,t_chrg,t_comm,t_tax"
+    },
+    "tradehistory.txt": {
+        "table": "tradehistory",
+        "columns": "th_t_id,th_dts,th_st_id"
+    },
+    "tradetype.txt": {
+        "table": "tradetype",
+        "columns": "tt_id,tt_name,tt_is_sell,tt_is_mrkt"
+    },
+    "watchhistory.txt": {
+        "table": "watchhistory",
+        "columns": "w_c_id,w_s_symb,w_dts,w_action"
+    }
+}

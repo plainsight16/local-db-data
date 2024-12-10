@@ -1,0 +1,47 @@
+version: '3.8'
+services:
+    database:
+        image: postgres:13
+        container_name: postgres-db
+        ports:
+            - 5432:5432
+        environment:
+            - POSTGRES_DB=${db_name}
+            - POSTGRES_USER=${db_user}
+            - POSTGRES_PASSWORD=${db_password}
+            - PGDATA=/var/lib/postgresql/data/pgdata
+        logging:
+            options:
+                max-size: 10m
+                max-file: "3"
+        volumes:
+            - postgres_volume:/var/data/postgres
+            - ${PWD}/tpc-di-data:/home/workspace/data/sf_current
+            - ./ingestion/create_tpc_di_postgres_schema_ps_realtime.sql:/docker-entrypoint-initdb.d/create_tpc_di_postgres_schema_ps_realtime.sql
+        healthcheck:
+          test: ["CMD-SHELL", "pg_isready -U ${db_user} -d ${db_name}"]
+          interval: 5s
+          timeout: 5s
+          retries: 5
+        # networks:
+        #     - shared-network
+    
+    app:
+        build: .
+        environment:
+            db_name: ${db_name}
+            db_user: ${db_user}
+            db_password: ${db_password}
+            db_host: database
+        depends_on:
+            database:
+                condition: service_healthy
+        volumes:
+            - ./tpc-di-data/Batch1:/app/csv_dir
+            
+volumes:
+    postgres_volume:
+
+# networks:
+#     shared-network:
+#         external: true
